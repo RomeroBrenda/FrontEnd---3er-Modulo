@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+    background-color: #f1f1f1;
+}
+
+main {
+    width: 100%;
+    max-width: 850px;
+    padding: 2rem;
+}
+
+h1 {
+    color: #b61515;
+    border-bottom: 2px solid #e0d7d7;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h2 {
+    color: #ca2b2b;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.instruccion {
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+}
+
+.formulario-tarjeta {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #dacece;
+    border-radius: 8px;
+    background-color: #fdf8f8;
+    margin-bottom: 1.5rem;
+}
+
+.formulario-tarjeta label {
+    font-weight: bold;
+    color: #6b5858;
+    margin-top: 0.5rem;
+}
+
+.formulario-tarjeta input[type="text"],
+.formulario-tarjeta textarea {
+    padding: 1rem;
+    border: 1px solid #bdadad;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.formulario-tarjeta input:focus,
+.formulario-tarjeta textarea:focus {
+    border-color: #642828;
+    outline: none;
+}
+
+button { 
+    background-color: #b61515;
+    color: white;
+    border: none;
+    border-radius: 5px; 
+    padding: 1rem 1.5rem; 
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease; 
+}
+
+button:hover {
+    background-color: #6e0101;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 1rem; 
+    padding: 1rem;
+    min-height: 100px;
+}
+
+.tarjeta-dinamica {
+    flex: 1 1 300px; 
+    background-color: #ffffff;
+    border: 2px solid #ca2b2b;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-dinamica:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta-dinamica h3 {
+    color: #b30000;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.tarjeta-dinamica p {
+    color: #574949;
+    margin-top: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.btn-eliminar {
+    position: absolute;
+    top: -10px; 
+    right: -10px;
+    padding: 8px 12px;
+    background-color: #d6636e;
+    color: white;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-radius: 50%;
+    line-height: 1;
+    z-index: 10; 
+    transition: background-color 0.2s;
+}
+
+.btn-eliminar:hover {
+    background-color: #c82333;
+    transform: none; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

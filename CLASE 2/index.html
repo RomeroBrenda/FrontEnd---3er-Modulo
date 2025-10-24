@@ -1,20 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercitacion | Clase 2</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body>
-    
-    <div>
-        <p>Hola! Mi nombre completo es: </p>
-        <p>Brenda Nahir Romero</p>
-        <p>Tengo 19 años</p>
-    </div>
+
+    <main>
+
+        <h2>Actividad 1: Explorando Relaciones Entre Elementos</h2>
+        <div class="actividad-1-container">
+            <p>Hola! Mi nombre completo es: </p>
+            <p>Brenda Nahir Romero</p>
+            <p>Tengo 19 años</p>
+        </div>
+
+        <h2>Actividad 2: Creando y Agregando Elementos</h2>
+        <div id="contenedor-clase2"></div>
+        <button id="btn-agregar-clase2">Agregar Elemento</button>
+
+        <h2>Actividad 3: innerHTML vs innerText</h2>
+        <div id="contenido-a-cambiar">
+            Este es el texto inicial del div. Haz clic en los botones para cambiarlo.
+        </div>
+
+        <button id="btn-inner-text">Cambiar con innerText</button>
+        <button id="btn-inner-html">Cambiar con innerHTML</button>
+
+        <h2>Actividad 4: Template Strings</h2>
+
+        <div class="actividad-4-container">
+            <label for="input-nombre">Ingresa tu nombre: </label>
+            <input type="text" id="input-nombre" placeholder="Ej: Brenda" required>
+
+            <button id="btn-mostrar-mensaje">Mostrar Mensaje</button>
+        </div>
+
+        <div id="mensaje-bienvenida"></div>
+
+    </main>
 
     <script src="app.js"></script>
 
 </body>
+
 </html>

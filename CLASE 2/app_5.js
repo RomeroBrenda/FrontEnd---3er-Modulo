@@ -7,6 +7,7 @@ const inputTarjetaNombre = document.getElementById('input-tarjeta-nombre');
 const inputTarjetaDescripcion = document.getElementById('input-tarjeta-descripcion');
 const btnCrearTarjeta = document.getElementById('btn-crear-tarjeta');
 const contenedorTarjetas = document.getElementById('contenedor-tarjetas');
+const btnEliminarUltima = document.getElementById('btn-eliminar-ultima');
 
 // Event Listener para CREAR la tarjeta
 btnCrearTarjeta.addEventListener('click', (event) => {
@@ -54,4 +55,20 @@ btnCrearTarjeta.addEventListener('click', (event) => {
     // Limpiamos los campos del formulario después de crear la tarjeta
     inputTarjetaNombre.value = '';
     inputTarjetaDescripcion.value = '';
+});
+
+// Event Listener para ELIMINAR LA ÚLTIMA TARJETA 
+btnEliminarUltima.addEventListener('click', () => {
+    
+    // Obtenemos el último elemento hijo del contenedor
+    const ultimaTarjeta = contenedorTarjetas.lastElementChild;
+
+    if (ultimaTarjeta) {
+        // Si existe una última tarjeta, la eliminamos
+        contenedorTarjetas.removeChild(ultimaTarjeta);
+        console.log("Última tarjeta eliminada.");
+    } else {
+        console.warn("No hay tarjetas para eliminar.");
+        alert("El contenedor de tarjetas está vacío.");
+    }
 });

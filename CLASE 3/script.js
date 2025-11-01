@@ -1,3 +1,5 @@
+// EJERCICIO 2: EVITAR COMPORTAMIENTO POR DEFECTO
+
 // Capturamos el hipervínculo por su ID
 let hipervinculo = document.getElementById('miEnlace');
 
@@ -20,7 +22,7 @@ hipervinculo.addEventListener('click', function (event) {
 */
 
 // ========================================================
-// EVITAR REDIRECCION SOLO BAJO CIERTAS CONDICIONES(CONFIRM)
+// EVITAR REDIRECCION SOLO BAJO CIERTAS CONDICIONES (CONFIRM)
 // ========================================================
 
 // Agregamos el Event Listener para el evento 'click'
@@ -41,3 +43,27 @@ hipervinculo.addEventListener('click', function (event) {
     // Si el usuario acepto, el código NO llama a event.preventDefault(),
     // y la acción nativa del enlace (la redirección) se ejecuta normalmente.
 });
+
+// EJERCICIO 3: EVENTOS DEL MOUSE
+
+// Seleccionamos TODOS los elementos que tienen la clase 'item-lista'
+let itemsLista = document.querySelectorAll('.item-lista');
+
+// Recorremos cada uno de los elementos seleccionados
+itemsLista.forEach(item => {
+
+    // mouseover: el mouse entra en el elemento
+    item.addEventListener('mouseover', function () {
+        // Cambia el color de fondo a uno resaltado
+        item.style.backgroundColor = 'yellow';
+        console.log('Mouse entró en: ' + item.textContent);
+    });
+
+    // mouseout: el mouse sale del elemento
+    item.addEventListener('mouseout', function () {
+        // Restablece el color de fondo a transparente (o el color original)
+        item.style.backgroundColor = 'transparent';
+        console.log('Mouse salió de: ' + item.textContent);
+    });
+});
+

@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Ejercitacion | Clase 3</title>
+    <link rel="stylesheet" href="style/styles.css">
 </head>
+
 <body>
 
+    <h1>Ejercitacion de Eventos en JS</h1>
+
+    <h2>Evitando el Comportamiento por Defecto</h2>
     <a href="https://www.google.com" id="miEnlace">Haz clic aquí para ir a Google</a>
 
-    <h2>Lista Interactiva</h2>
+    <h2>Resaltando Elementos con Eventos del Mouse</h2>
+    <h3>Lista Interactiva</h3>
     <ul id="listaPalabras">
         <li class="item-lista">JavaScript</li>
         <li class="item-lista">Eventos</li>
@@ -16,7 +23,21 @@
         <li class="item-lista">Mouseover</li>
     </ul>
 
+    <h2>Detección de Teclas Presionadas</h2>
+    <input type="text" id="campoTexto" size="50" placeholder="Comienza a escribir...">
+    <p id="mensajeEnter"></p>
+
+    <h2>Controlando la Propagacion de Eventos</h2>
+    <div id="abuelo"> 
+        Abuelo
+        <div id="padre">
+            Padre
+            <div id="hijo">Haz clic aquí (Hijo)</div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 
 </body>
+
 </html>
